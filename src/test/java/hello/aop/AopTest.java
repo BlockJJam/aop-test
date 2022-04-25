@@ -18,8 +18,10 @@ import org.springframework.context.annotation.Import;
 //@Import(AspectV3.class)
 //@Import(AspectV4Pointcut.class)
 //@Import(AspectV5Order.class) // V5 이렇게하면 적용 안된다!!!!
-@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+//@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+@Import(AspectV6Advice.class)
 public class AopTest {
+
 
     @Autowired
     OrderService orderService;
